@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Breast Cancer Prediction</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/img/favicon1.ico" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <style>
+  	body {background-image: url('../static/img/world.jpg');    background-repeat: no-repeat; background-attachment: fixed; background-size:cover;}
+  </style>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body text="black">
+	
+	
+	<div class="login">
+		<!--Get input for predict the cancer-->
+		<center>
+			<form action="{{ url_for('predict')}}"method="post">
+				<h1>BREAST CANCER PREDICTION</h1><h2>END TO END DEPLOYMENT OF MACHINE LEARNING MODEL</h2><h2> Pleas Enter Below Fields</h2>
+				<input type="text" name="texture_mean" placeholder="texture_mean" required="required" />
+				<input type="text" name="area_mean" placeholder="area_mean" required="required" />
+				<input type="text" name="concavity_mean" placeholder="concavity_mean" required="required" />
+				<br>
+				<input type="text" name="area_se" placeholder="area_se" required="required" />	
+				<input type="text" name="concavity_se" placeholder="concavity_se" required="required" />
+				<input type="text" name="fractal_dimension_se" placeholder="fractal_dimension_se" required="required" />
+				<br>
+				<input type="text" name="smoothness_worst" placeholder="smoothness_worst" required="required" />
+				<input type="text" name="concavity_worst" placeholder="concavity_worst" required="required" />
+				<input type="text" name="symmetry_worst" placeholder="symmetry_worst" required="required" />
+				<br>
+				<input type="text" name="fractal_dimension_worst" placeholder="fractal_dimension_worst" required="required" /> 
+
+				<!-- show button-->
+				<div class="button_cont" align="center"><a class="button_css">
+				<br>
+					<button text="blue" type="submit" class="btn btn-primary btn-block btn-large"><strong><h2> CLICK HERE TO PREDICT </h2></strong>
+					
+					</button></a>
+				</div>
+			</form>
+		</center> <!--Show predicted output using ML model-->
+		<div>
+			<center>
+				<h1>{{ prediction_text}}</h1>
+				<h2>
+					<p>Dataset used:<a href="https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data" style="color: blue;"> Diagnostic Wisconsin Breast Cancer Dataset</a></p>
+				</h2>
+			
+
+       <h2>
+					<p>Presenter:<a style="color: blue;"> Shubham Patil</a>
+		</h2>
+
+
+			<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<style>
+				.fa{
+					padding: 20px; font-size: 30px; width: 30px; text-align: top; text-decoration: none; border-radius: 15%; margin: 5px 2px;}
+					<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+					<style>
+					.fa:hover { opacity: 100; }
+					.fa-facebook {background: #000000;color:blue;}
+					.fa-github {background: #000000;color:red;}
+					.fa-linkedin {background: #000000;color:blue;}
+					.fa-grav {background: #000000;color:aqua;}
+					.fa-instagram {background: #000000;color: #c13584;}
+					.fa-phone {background: #000000;color:blue;}
+					.fa-envelope {background: #000000;color:red;}
+					.fa-youtube {background: #000000;color:red;}
+					.fa-whatsapp {background: #000000;color:green;}
+					.fa-medium {background: #000000;color:blue;}
+					.fa-android {background: #000000;color:red;}
+					.fa-free-code-camp {background: #000000;color:yellow;}
+					.fa-telegram  {background: #000000;color:blue;}
+					.fa-globe  {background: #000000;color:aqua;}
+					</style>
+					
+				
+		</ul>
+		
+		</center>
+	</div >
+
+	</body>
+	</html>
